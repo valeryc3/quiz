@@ -79,49 +79,77 @@ $(".8").click(function(){
 function five()
 {
     $(".fifth").show();
-    $(".go").show();
+    
 }
 
 $(".9").click(function(){
     points += 3;
     $(".fifth").hide();
-    
+    go();
 });
 $(".10").click(function(){
     points += 2;
     $(".fifth").hide();
-    
+    go();
 });
+function go()
+{
+
+    $(".go").show();
+    
+    
+}
 
 });
  $(".go").click(function(){
      $(".go").hide(); 
     if(points == 24)
     {
-       $(".result").text( "Ariel");
+        $(".result").text("Ariel");
+        $(".result").append('<img class="m" src="ariel.jpg">' );
+        $(".result").css("background-color","blue");
     }
      else if(points >=15 && points<=17)
     {
-         $(".result").text( "repunzel");
+        $(".result").text("Tangled");
+         $(".result").append('<img class="m" src="tangled.jpg">' );
+         $(".result").css("background-color","purple");
+    
+    }
+     else if(points >17&& points<=19)
+    {
         
-    }
-     else if(points >17&& points<19)
-    {
-         $(".result").text( "Pocahontas");
+      $(".result").text("Pocahontas");
+          $(".result").append('<img class="m" src="Pocahontas.jpg">' );
+          $(".result").css("background-color","yellow");
        
     }
-        else if(points >19&& points<21)
+        else if(points >19&& points<=21)
     {
-         $(".result").text( "Elsa");
-       
+        $(".result").text("Tiana");
+        
+         $(".result").append('<img class="m" src="tiana.jpg">' );
+       $(".result").css("background-color","green");
     }
            else if(points >21&& points<24)
     {
-         $(".result").text( "Tiana");
+        $(".result").text("Merida");
+         $(".result").append('<img class="m" src="Merida.png">' );
+         $(".result").css("background-color","red");
+        
        
+    }
+       else if(points >13 && points<15)
+    {
+        $(".result").text("Mulan");
+         $(".result").append('<img class="m" src="mulan.jpeg">' );
+         $(".result").css("background-color","pink");
+    
     }
     else if(points == 13)
     {
-     $(".result").text( "Snow White");
+        $(".result").text("Snow White");
+     $(".result").append('<img class="m" src="snowwhite.jpg" >');
+     $(".result").css("background-color","lightblue");
     }
  });
